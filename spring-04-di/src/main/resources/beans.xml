@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.wang.pojo.Address">
+        <property name="address" value="福建省 福州市"/>
+    </bean>
+
+
+
+    <bean id="student" class="com.wang.pojo.Student">
+        <!--1.普通注入，value-->
+        <property name="name" value="王冰炜"/>
+
+        <!--2.Bean注入，ref-->
+        <property name="address" ref="address"/>
+
+        <!--3.数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <!--4.List-->
+        <property name="hobbys">
+            <list>
+                <value>看书</value>
+                <value>看报</value>
+                <value>睡觉</value>
+            </list>
+        </property>
+
+        <!--5.Map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="1111111111111"/>
+                <entry key="银行卡" value="2222222222222"/>
+            </map>
+        </property>
+
+        <!--6.Set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+            </set>
+        </property>
+
+        <!--7.null-->
+        <property name="wife">
+            <null/>
+        </property>
+
+        <!--8.配置类 props-->
+        <property name="info">
+            <props>
+                <prop key="学号">211806342</prop>
+                <prop key="性别">男</prop>
+                <prop key="username">wbwbg</prop>
+                <prop key="passwotd">123456</prop>
+            </props>
+        </property>
+
+    </bean>
+
+</beans>
