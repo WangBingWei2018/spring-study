@@ -4,6 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+
     <bean id="address" class="com.wang.pojo.Address">
         <property name="address" value="福建省 福州市"/>
     </bean>
