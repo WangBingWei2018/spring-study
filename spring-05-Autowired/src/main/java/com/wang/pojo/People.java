@@ -9,7 +9,7 @@ import javax.annotation.Resource;
 
 public class People {
     @Autowired
-    @Qualifier("cat1")
+    @Qualifier(value = "cat1")
     private Cat cat;
     @Resource(name = "dog2")
     private Dog dog;
