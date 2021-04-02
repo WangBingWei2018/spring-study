@@ -4,10 +4,6 @@ public class UserServiceProxy implements UserService {
 
     UserServiceImpl userService = new UserServiceImpl();
 
-    public UserServiceImpl getUserService() {
-        return userService;
-    }
-
     public void setUserService(UserServiceImpl userService) {
         this.userService = userService;
     }

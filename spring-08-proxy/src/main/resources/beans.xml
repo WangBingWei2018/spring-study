@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+<!--    <bean id="serviceImpl" class="com.wang.demo02.UserServiceImpl"/>-->
+<!--    <bean id="aspect" class="com.wang.demo02.MyAspect"/>-->
+
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="aspect">-->
+<!--            <aop:pointcut id="Ponitcut" expression="execution(* com.wang.demo02.UserServiceImpl.*(..))"/>-->
+<!--            <aop:before pointcut-ref="Ponitcut" method="before"/>-->
+<!--            <aop:after pointcut-ref="Ponitcut" method="after"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+
+    <!--第三种方式:注解实现-->
+    <bean id="wxl" class="com.wang.demo03.entity.Person">
+        <property name="name" value="王晓玲"/>
+        <property name="age" value="20"/>
+    </bean>
+
+    <bean id="ServiceImpl" class="com.wang.demo03.service.UserServiceImpl">
+        <constructor-arg name="person" ref="wxl"/>
+    </bean>
+    <bean id="cut" class="com.wang.demo03.utils.MyAspect"/>
+    <aop:aspectj-autoproxy/>
+</beans>
