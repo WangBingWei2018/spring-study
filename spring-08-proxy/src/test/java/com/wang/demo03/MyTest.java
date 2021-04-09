@@ -17,7 +17,7 @@ public class MyTest {
     @Test
     public void Test01(){
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-        UserService service = (UserService) context.getBean("ServiceImpl");
+        UserService service = (UserService) context.getBean("userService");
         service.Eat();
 
     }

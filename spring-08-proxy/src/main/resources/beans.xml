@@ -23,9 +23,11 @@
         <property name="age" value="20"/>
     </bean>
 
-    <bean id="ServiceImpl" class="com.wang.demo03.service.UserServiceImpl">
+    <bean id="userService" class="com.wang.demo03.service.UserServiceImpl">
         <constructor-arg name="person" ref="wxl"/>
     </bean>
+
     <bean id="cut" class="com.wang.demo03.utils.MyAspect"/>
+    <!--开启自动识别-->
     <aop:aspectj-autoproxy/>
 </beans>
